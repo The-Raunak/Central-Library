@@ -6,14 +6,13 @@ import java.util.Scanner;
 
 import static java.lang.System.in;
 
-
-public class science_Corner implements central_library {
+public class software_Engineering_Corner implements central_library {
     String nameOfBook, author;
     int book_Id, quantity, rollNoOfStudent;
     date date;
-    science_Corner book_Storage[] = new science_Corner[0];
+    software_Engineering_Corner book_Storage[] = new software_Engineering_Corner[0];
 
-    int count(int n, science_Corner book_Storage[]) {
+    int count(int n, software_Engineering_Corner book_Storage[]) {
         int l = book_Storage.length;
         int ans = 0;
         for (int i = 0; i < l; i++) {
@@ -27,7 +26,7 @@ public class science_Corner implements central_library {
     @Override
     public void book_Insert() {
         Scanner s = new Scanner(in);
-        for(int i = 0;i<10;i++) {
+        for (int i = 0; i < 5; i++) {
             System.out.println("Name of the book = ");
             book_Storage[i].nameOfBook = s.nextLine();
             System.out.println("Name of the author = ");
@@ -35,7 +34,7 @@ public class science_Corner implements central_library {
             System.out.println("Book Id = ");
             book_Storage[i].book_Id = s.nextInt();
             System.out.println("Quantity of the book :: " + book_Storage[i].nameOfBook + " = ");
-            book_Storage[i].quantity = count(book_Storage[i].book_Id,book_Storage);
+            book_Storage[i].quantity = count(book_Storage[i].book_Id, book_Storage);
             System.out.print(book_Storage[i].quantity);
             if (book_Storage[i].quantity > 0) {
                 System.out.println("the book " + book_Storage[i].nameOfBook + " is available");
@@ -51,7 +50,7 @@ public class science_Corner implements central_library {
         System.out.println("Enter the book id = ");
         int Id = s.nextInt();
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 5; i++) {
             if (book_Storage[i].book_Id == Id && book_Storage[i].quantity > 0) {
                 book_Storage[i].quantity--;
                 System.out.println("Enter the rollNo = ");
